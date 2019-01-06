@@ -21,6 +21,17 @@
 	<div class="row">
 			<div  class="col-sm-12 col-lg-12">
 		<?php if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) {
+			
+			/* Load JS scripts and CSS only on this page taken from https://contactform7.com/loading-javascript-and-stylesheet-only-when-it-is-necessary/*/
+			
+			 if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+					wpcf7_enqueue_scripts();
+				}
+			 
+				if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+					wpcf7_enqueue_styles();
+				}
+			
 					echo do_shortcode('[contact-form-7 id="164" title="Formularz 1"]');
 		}?>
 			</div> 
