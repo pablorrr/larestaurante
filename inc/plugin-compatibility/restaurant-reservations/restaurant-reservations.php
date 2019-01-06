@@ -16,8 +16,7 @@
  * You should have received a copy of the GNU General Public License along with this program; if not, write
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-if ( ! defined( 'ABSPATH' ) )
-	exit;
+
 /**
  * Automatically confirm new bookings when they are added to the
  * database.
@@ -30,3 +29,13 @@ function rtbcnb_confirm_new_bookings( $args, $booking ) {
 	}
 	return $args;
 }
+
+/**
+ * Increase max count of guest to 350 (originally 200)
+ * 
+ */
+add_filter( 'rtb_party_size_upper_limit', 'rtbmps_increase_party_size_options', 10 );
+function rtbmps_increase_party_size_options( $max ) {
+	return 350;
+}
+
