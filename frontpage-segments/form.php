@@ -21,7 +21,7 @@
 	<div class="row">
 			<div  class="col-sm-12 col-lg-12">
 		<?php if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) ) {
-					echo do_shortcode('[contact-form-7 id="1062" title="Contact form 1"]');
+					echo do_shortcode('[contact-form-7 id="164" title="Formularz 1"]');
 		}?>
 			</div> 
 		</div>		 	
