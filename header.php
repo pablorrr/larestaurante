@@ -137,6 +137,14 @@
 							href="'.esc_url(get_permalink(wc_get_page_id( 'shop' ) )).'" >Go to the Shop
 							<i class="fa fa-shopping-bag"></i></a>';
 							}?>
+							
+							<?php if(is_plugin_active( 'restaurant-reservations/restaurant-reservations.php')) :?>
+							<a id="bookit" style="font-size:1.7em;" class="btn btn-secondary btn-lg">
+								<?php _e('Book a table','larestaurante');?><i class="fa fa-book"></i></a>
+								<div id="book"><?php echo do_shortcode( '[booking-form]' ); ?></div>
+		
+							
+							<?php endif; ?>
 					
 						<p class="site-description respo"><?php echo $description; ?></p>
 						<a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>	

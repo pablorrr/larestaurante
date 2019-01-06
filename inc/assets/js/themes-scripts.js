@@ -76,7 +76,8 @@ jQuery( function ( $ ) {
 	
 	//slide toggle booking 
 	    $("#book").hide();   
-		$("#bookit").click(function(){
+		$("#bookit").click(function(e){
+			e.preventDefault();
         $("#book").slideToggle("slow","swing");
 	}); 
 	

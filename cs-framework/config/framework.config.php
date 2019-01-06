@@ -189,7 +189,7 @@ $options[]   = array(
 										'gallery'  => 'gallery',
 										'opinion'  => 'opinion',
 										'form'     => 'form',
-										'booking'  => 'booking',
+										
 											),
 										  ),
 										'help' => 'select segments to appear on the page and the order of their occurrence',
