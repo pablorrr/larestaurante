@@ -139,7 +139,7 @@
 							}?>
 							
 							<?php if(is_plugin_active( 'restaurant-reservations/restaurant-reservations.php')) :?>
-							<a id="bookit" style="font-size:1.7em;" class="btn btn-secondary btn-lg">
+							<a id="bookit" style="font-size:1.7em;" class="btn btn-secondary btn-lg" href="#">
 								<?php _e('Book a table','larestaurante');?><i class="fa fa-book"></i></a>
 								<div id="book"><?php echo do_shortcode( '[booking-form]' ); ?></div>
 		
