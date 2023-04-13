@@ -137,7 +137,9 @@
 							href="'.esc_url(get_permalink(wc_get_page_id( 'shop' ) )).'" >Go to the Shop
 							<i class="fa fa-shopping-bag"></i></a>';
 							}?>
-							
+                        <?php if (!function_exists('is_plugin_active')) {
+                            include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+                        } ?>
 							<?php if(is_plugin_active( 'restaurant-reservations/restaurant-reservations.php')) :?>
 							<a id="bookit" style="font-size:1.7em;" class="btn btn-secondary btn-lg">
 								<?php _e('Book a table','larestaurante');?><i class="fa fa-book"></i></a>
