@@ -160,7 +160,9 @@
    <?php elseif( !has_header_image() && is_front_page()):?><!--if( has_header_image() && is_front_page())--> 
    <?php get_template_part('header-nomenu');?> 
    <?php endif;?>
-   
+   <?php if (!function_exists('is_plugin_active')) {
+       include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+   } ?>
    <?php if(is_plugin_active( 'woocommerce/woocommerce.php') && !is_front_page() ):?>
    <?php get_template_part('woo-head');?>
   
