@@ -212,7 +212,7 @@ function larestaurante_getCurrentPageUrl(){
 
 add_filter('posts_where', 'larestaurante_title_like_posts_where', 10, 2);
 
-    function larestaurante_title_like_posts_where( $where, &$wp_query ) {
+    function larestaurante_title_like_posts_where( $where, $wp_query ) {
 	
         global $wpdb;
         
